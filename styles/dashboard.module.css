@@ -1,0 +1,104 @@
+.userCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.userCard__body {
+  padding: 7px 40px;
+  background: #0808bd;
+  border-radius: 10px;
+  color: floralwhite;
+}
+
+.imageBox {
+  height: 200px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imageBox img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sliderSection {
+  background: black;
+}
+
+.profileCard__name {
+  font-size: 1rem;
+}
+
+.profileCard__userType {
+  font-size: .8rem;
+}
+
+.profileSection {
+  width: 100%;
+}
+
+.profileCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: aliceblue;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #212529;
+}
+
+.profileCard p {
+  margin: 0;
+}
+
+.profileCard__imageBox {
+  height: 6rem;
+  width: 6rem;
+  padding: .5rem;
+}
+
+.profileCard__image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profileCard__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=dashboard.module.css.map */
