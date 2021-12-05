@@ -10,4 +10,4 @@ WORKDIR /site
 RUN npm install
 
 #start server
-CMD npm start
+CMD npm run dev
