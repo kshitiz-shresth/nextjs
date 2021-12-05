@@ -8,11 +8,19 @@ import 'react-multi-carousel/lib/styles.css';
 import ReactStars from "react-rating-stars-component";
 import Link from 'next/dist/client/link';
 export const getServerSideProps = async () => {
-    const res = await fetch("http://52.88.23.115:4000/api/user/dashboard?user_id=61968d32bdf5460035a89d11")
-    const data = await res.json();
-    return {
-        props: { lists: data }
+    try{
+        const res = await fetch("http://52.88.23.115:4000/api/user/dashboard?user_id=61968d32bdf5460035a89d11")
+        const data = await res.json();
+        return {
+            props: { lists: data }
+        }    
+    }catch(error){
+        return {
+            props:{lists: error}
+        }
+        console.log(error);
     }
+    
 }
 
 const index = ({ lists }) => {
@@ -35,7 +43,8 @@ const index = ({ lists }) => {
     };
     return (
         <>
-            <MyHead title={'Dashboard'} />
+            {JSON.stringify(lists)}
+            {/* <MyHead title={'Dashboard'} />
             <section className={`${styles.sliderSection} p-3`}>
                 <Container>
                     <h5 className="text-light">Recent Renters</h5>
@@ -77,7 +86,7 @@ const index = ({ lists }) => {
                         ))}
                     </Carousel>
                 </Container>
-            </section>
+            </section> */}
 
         </>
     )

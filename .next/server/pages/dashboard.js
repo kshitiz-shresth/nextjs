@@ -5,6 +5,35 @@ exports.id = 26;
 exports.ids = [26];
 exports.modules = {
 
+/***/ 364:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const MyHead = (children)=>{
+    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                children: children.title
+            })
+        })
+    }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyHead);
+
+
+/***/ }),
+
 /***/ 529:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -27,15 +56,10 @@ var external_react_bootstrap_ = __webpack_require__(358);
 var MyHead = __webpack_require__(364);
 // EXTERNAL MODULE: ./components/Navbar.js
 var Navbar = __webpack_require__(10);
-// EXTERNAL MODULE: ./styles/dashboard.module.css
-var dashboard_module = __webpack_require__(816);
-var dashboard_module_default = /*#__PURE__*/__webpack_require__.n(dashboard_module);
 ;// CONCATENATED MODULE: external "react-multi-carousel"
 const external_react_multi_carousel_namespaceObject = require("react-multi-carousel");
-var external_react_multi_carousel_default = /*#__PURE__*/__webpack_require__.n(external_react_multi_carousel_namespaceObject);
 ;// CONCATENATED MODULE: external "react-rating-stars-component"
 const external_react_rating_stars_component_namespaceObject = require("react-rating-stars-component");
-var external_react_rating_stars_component_default = /*#__PURE__*/__webpack_require__.n(external_react_rating_stars_component_namespaceObject);
 // EXTERNAL MODULE: ./node_modules/next/dist/client/link.js
 var client_link = __webpack_require__(418);
 ;// CONCATENATED MODULE: ./pages/dashboard/index.js
@@ -50,13 +74,22 @@ var client_link = __webpack_require__(418);
 
 
 const getServerSideProps = async ()=>{
-    const res = await fetch("http://52.88.23.115:4000/api/user/dashboard?user_id=61968d32bdf5460035a89d11");
-    const data = await res.json();
-    return {
-        props: {
-            lists: data
-        }
-    };
+    try {
+        const res = await fetch("http://52.88.23.115:4000/api/user/dashboard?user_id=61968d32bdf5460035a89d11");
+        const data = await res.json();
+        return {
+            props: {
+                lists: data
+            }
+        };
+    } catch (error) {
+        return {
+            props: {
+                lists: error
+            }
+        };
+        console.log(error);
+    }
 };
 const index = ({ lists  })=>{
     const responsive = {
@@ -85,88 +118,8 @@ const index = ({ lists  })=>{
             slidesToSlide: 1 // optional, default to 1.
         }
     };
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(MyHead/* default */.Z, {
-                title: 'Dashboard'
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("section", {
-                className: `${(dashboard_module_default()).sliderSection} p-3`,
-                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_react_bootstrap_.Container, {
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx("h5", {
-                            className: "text-light",
-                            children: "Recent Renters"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx((external_react_multi_carousel_default()), {
-                            swipeable: true,
-                            draggable: true,
-                            infinite: true,
-                            arrows: false,
-                            itemClass: "carousel-item-padding-40-px",
-                            autoPlay: true,
-                            autoPlaySpeed: 5000,
-                            minimumTouchDrag: 20,
-                            responsive: responsive,
-                            className: "mt-3",
-                            children: lists.recentUsers.map((item)=>/*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                    className: (dashboard_module_default()).profileSection,
-                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                        className: (dashboard_module_default()).profileCard,
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                                className: (dashboard_module_default()).profileCard__imageBox,
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                                    className: (dashboard_module_default()).profileCard__image,
-                                                    src: item.picture_url || 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png'
-                                                })
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                                className: (dashboard_module_default()).profileCard__info,
-                                                children: [
-                                                    /*#__PURE__*/ jsx_runtime_.jsx("h5", {
-                                                        className: (dashboard_module_default()).profileCard__name,
-                                                        children: item.name
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                        className: (dashboard_module_default()).profileCard__userType,
-                                                        children: item.user_type
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx((external_react_rating_stars_component_default()), {
-                                                        count: 5,
-                                                        size: 24,
-                                                        edit: false,
-                                                        value: item.userRating,
-                                                        isHalf: true,
-                                                        emptyIcon: /*#__PURE__*/ jsx_runtime_.jsx("i", {
-                                                            className: "far fa-star"
-                                                        }),
-                                                        halfIcon: /*#__PURE__*/ jsx_runtime_.jsx("i", {
-                                                            className: "fa fa-star-half-alt"
-                                                        }),
-                                                        fullIcon: /*#__PURE__*/ jsx_runtime_.jsx("i", {
-                                                            className: "fa fa-star"
-                                                        }),
-                                                        activeColor: "#ffd700"
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(client_link/* default */.Z, {
-                                                        href: `/users/${item._id}`,
-                                                        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                                            className: "btn btn-primary mb-4",
-                                                            children: "View Profile"
-                                                        })
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                }, item._id)
-                            )
-                        })
-                    ]
-                })
-            })
-        ]
+    return(/*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: JSON.stringify(lists)
     }));
 };
 /* harmony default export */ const dashboard = (index);
@@ -300,7 +253,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,285,418,10,179], () => (__webpack_exec__(529)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,285,418,10], () => (__webpack_exec__(529)));
 module.exports = __webpack_exports__;
 
 })();
