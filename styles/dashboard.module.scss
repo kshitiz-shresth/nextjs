@@ -31,14 +31,24 @@ $primaryColor: #00aa4f;
             color: rgb(216, 216, 216);
         }
     }
+
+    &__heading {
+        color: rgb(238, 238, 238);
+        font-weight: 400;
+    }
 }
 
 
-
+.breaker {
+    margin: 0;
+    height: 1px;
+    background: rgb(32, 32, 32);
+}
 
 
 .profileSection {
     width: 100%;
+
 }
 
 .profileCard {
@@ -50,20 +60,46 @@ $primaryColor: #00aa4f;
     height: 20rem;
     margin: 10px;
     border-radius: 10px;
-    background-color: #212529;
+    background-color: #1b1b1b;
+
     p {
         margin: 0;
     }
+
     &__name {
         margin-top: 9px;
         font-size: 15px;
+        font-weight: 100;
     }
+
     &__userType {
         font-size: 14px;
+        font-weight: 600;
+
+        // color: rgb(160, 160, 160);
+        &_musician {
+            background: #CF68C1;
+            background: -webkit-linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            background: -moz-linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            background: linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &_renter {
+            background: #CF68C1;
+            background: -webkit-linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            background: -moz-linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            background: linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
+
     &__imageBox {
         height: 7rem;
         width: 7rem;
+
     }
 
     &__image {
@@ -78,15 +114,17 @@ $primaryColor: #00aa4f;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin-top: .6rem;
     }
 
     &__button {
-        background: $primaryColor;
+        background: linear-gradient(81deg, #363636 0%, #3f3f3f 100%);
         color: #fff;
         text-decoration: none;
-        padding: .2rem .6rem;
-        border-radius: .3rem;
+        padding: .3rem .7rem;
+        border-radius: .4rem;
         font-size: 13px;
+
         &:hover {
             color: #fff;
             background-color: $primaryColor;

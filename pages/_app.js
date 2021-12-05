@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <Layout>
-      <NextNProgress />
+      <NextNProgress options={{ showSpinner: false }}/>
       <Component {...pageProps} />
     </Layout>
     </>

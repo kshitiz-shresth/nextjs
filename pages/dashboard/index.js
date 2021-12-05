@@ -7,6 +7,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ReactStars from "react-rating-stars-component";
 import Link from 'next/dist/client/link';
+
+
 export const getServerSideProps = async () => {
     const res = await fetch(`${process.env.apiUrl}/user/dashboard`)
     const data = await res.json();
@@ -36,10 +38,10 @@ const index = ({ lists }) => {
     return (
         <>
             <MyHead title={'Dashboard'} />
-            <section className={`${styles.sliderSection} p-3`}>
+            <section className={`${styles.sliderSection} p-3 mt-5`}>
                 {/* recent users */}
-                <Container>
-                    <h5 className="text-light">Recent Renters</h5>
+                <Container className={'mt-4'}>
+                    <h4 className={`${styles.sliderSection__heading} mb-1`}>Recent Renters</h4>
                     <Carousel swipeable={true}
                         draggable={true}
                         infinite={true}
@@ -58,11 +60,11 @@ const index = ({ lists }) => {
                                         <img className={styles.profileCard__image} src={item.picture_url || 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png'}></img>
                                     </div>
                                     <div className={styles.profileCard__info}>
-                                        <h5 className={styles.profileCard__name}>{item.name}</h5>
-                                        <span className={styles.profileCard__userType}>{item.user_type}</span>
+                                        <p className={styles.profileCard__name}>{item.name}</p>
+                                        <span className={`${styles.profileCard__userType} ${styles['profileCard__userType_'+item.user_type]}`}>{item.user_type}</span>
                                         <ReactStars
                                             count={5}
-                                            size={24}
+                                            size={17}
                                             edit={false}
                                             value={item.userRating}
                                             isHalf={true}
@@ -71,7 +73,7 @@ const index = ({ lists }) => {
                                             fullIcon={<i className="fa fa-star"></i>}
                                             activeColor="#ffd700"
                                         />
-                                        <Link href={`/users/${item._id}`}><a className={`${styles.profileCard__button} mt-2 mb-4`}>View Profile</a></Link>
+                                        <Link href={`/users/${item._id}`}><a className={`${styles.profileCard__button} mt-2`}>View Profile</a></Link>
                                     </div>
                                 </div>
                             </div>
@@ -80,10 +82,11 @@ const index = ({ lists }) => {
                 </Container>
             
             </section>
-            <section className={`${styles.sliderSection} ${styles.sliderSection__light} p-3`}>
+            <div className={`${styles.breaker}`}></div>
+            <section className={`${styles.sliderSection} p-3`}>
                     {/* popular users */}
                     <Container>
-                    <h5 className={`${styles.sliderSection_text}`}>Popular Renters</h5>
+                    <h4 className={`${styles.sliderSection__heading} mb-1`}>Popular Renters</h4>
                     <Carousel 
                         swipeable={true}
                         draggable={true}
@@ -103,11 +106,11 @@ const index = ({ lists }) => {
                                         <img className={styles.profileCard__image} src={item.picture_url || 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png'}></img>
                                     </div>
                                     <div className={styles.profileCard__info}>
-                                        <h5 className={styles.profileCard__name}>{item.name}</h5>
-                                        <span className={styles.profileCard__userType}>{item.user_type}</span>
+                                        <p className={styles.profileCard__name}>{item.name}</p>
+                                        <span className={`${styles.profileCard__userType} ${styles['profileCard__userType_'+item.user_type]}`}>{item.user_type}</span>
                                         <ReactStars
                                             count={5}
-                                            size={24}
+                                            size={17}
                                             edit={false}
                                             value={item.userRating}
                                             isHalf={true}
@@ -124,7 +127,7 @@ const index = ({ lists }) => {
                     </Carousel>
                 </Container>
             </section>
-
+            <div className={`${styles.breaker}`}></div>
         </>
     )
 }

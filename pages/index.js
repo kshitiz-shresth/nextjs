@@ -10,7 +10,7 @@ const index = () => {
   return (
     <Container bg="fluid">
       <Head>
-        <title>Create Next App</title>
+        <title>InstaBand</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
