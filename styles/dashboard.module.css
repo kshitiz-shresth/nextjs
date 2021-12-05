@@ -9,13 +9,6 @@
   margin-top: 50px;
 }
 
-.userCard__body {
-  padding: 7px 40px;
-  background: #0808bd;
-  border-radius: 10px;
-  color: floralwhite;
-}
-
 .imageBox {
   height: 200px;
   width: 200px;
@@ -36,12 +29,12 @@
   background: black;
 }
 
-.profileCard__name {
-  font-size: 1rem;
+.sliderSection__light {
+  background: #363636;
 }
 
-.profileCard__userType {
-  font-size: .8rem;
+.sliderSection__light .sliderSection_text {
+  color: #d8d8d8;
 }
 
 .profileSection {
@@ -63,8 +56,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 20rem;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #212529;
 }
 
@@ -72,18 +66,26 @@
   margin: 0;
 }
 
+.profileCard__name {
+  margin-top: 9px;
+  font-size: 15px;
+}
+
+.profileCard__userType {
+  font-size: 14px;
+}
+
 .profileCard__imageBox {
-  height: 6rem;
-  width: 6rem;
-  padding: .5rem;
+  height: 7rem;
+  width: 7rem;
 }
 
 .profileCard__image {
   height: 100%;
   width: 100%;
-  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 
 .profileCard__info {
@@ -100,5 +102,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.profileCard__button {
+  background: #00aa4f;
+  color: #fff;
+  text-decoration: none;
+  padding: .2rem .6rem;
+  border-radius: .3rem;
+  font-size: 13px;
+}
+
+.profileCard__button:hover {
+  color: #fff;
+  background-color: #00aa4f;
 }
 /*# sourceMappingURL=dashboard.module.css.map */

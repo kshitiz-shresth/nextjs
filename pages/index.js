@@ -13,7 +13,8 @@ const index = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section style={{ background:'#000' }}>
+      <section>
+      
 
       </section>
     </Container>
