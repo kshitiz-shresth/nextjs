@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:14
 
 #copy all files to app directory
 COPY . .
@@ -10,4 +10,5 @@ WORKDIR /site
 RUN npm install
 
 #start server
-CMD npm run dev
+CMD ['npm','run','build']
+CMD ['npm','run','start']
