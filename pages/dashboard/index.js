@@ -44,7 +44,7 @@ const index = ({ lists }) => {
     return (
         <>
             {JSON.stringify(lists)}
-            {/* <MyHead title={'Dashboard'} />
+            <MyHead title={'Dashboard'} />
             <section className={`${styles.sliderSection} p-3`}>
                 <Container>
                     <h5 className="text-light">Recent Renters</h5>
@@ -86,7 +86,7 @@ const index = ({ lists }) => {
                         ))}
                     </Carousel>
                 </Container>
-            </section> */}
+            </section>
 
         </>
     )
