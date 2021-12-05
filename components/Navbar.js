@@ -16,6 +16,9 @@ const MyNavbar = () => {
                         <Link href="/dashboard" passHref>
                             <Nav.Link>Dashboard</Nav.Link>
                         </Link>
+                        <Link href="/new" passHref>
+                            <Nav.Link>New</Nav.Link>
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
