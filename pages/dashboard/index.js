@@ -38,7 +38,7 @@ const index = ({ lists }) => {
             <MyHead title={'Dashboard'} />
             <section className={`${styles.sliderSection} p-3`}>
                 <Container>
-                    <h5 className="text-light">Recent Renters</h5>
+                    <h5 className="text-light">Popular Renters</h5>
                     <Carousel swipeable={true}
                         draggable={true}
                         infinite={true}
