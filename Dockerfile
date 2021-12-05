@@ -10,5 +10,5 @@ WORKDIR /site
 RUN npm install
 
 #start server
-CMD ['npm','run','build']
-CMD ['npm','run','start']
+CMD npm run build
+CMD npm run start
