@@ -1,46 +1,62 @@
 html {
-    font-size: 16px;
-    background-color: black;
+  font-size: 16px;
+  background-color: black;
 }
 
 @media (max-width: 900px) {
-    html {
-        font-size: 14px;
-    }
+  html {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 501px) {
-    html {
-        font-size: 12px;
-    }
+  html {
+    font-size: 12px;
+  }
 }
 
 .navbar-nav a {
-    font-size: 14px;
-
+  font-size: 14px;
 }
 
 a.navbar-brand {
-    font-size: 24px;
-    color: #78b630;
-    font-weight: 400;
-    background: #CF68C1;
-    background: -webkit-linear-gradient(to right, #b7ff43 0%, #fcff00 100%);
-    background: -moz-linear-gradient(to right, #b7ff43 0%, #fcff00 100%);
-    background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  color: #78b630;
+  font-weight: 400;
+  background: #CF68C1;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff));
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btn:focus, .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
+.btn:focus,
+.navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.btn, .navbar-toggler {
-    box-shadow: none !important
+.btn,
+.navbar-toggler {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
-nav.navbar.bg-dark{
-    background-color: #1b1b1b!important;
+nav.navbar.bg-dark {
+  background-color: #1b1b1b !important;
 }
+
+.insta-btn {
+  padding: .4rem 1rem;
+  background: #ffffff00;
+  border-radius: 26px;
+  color: #fff;
+  border: 2px solid #272727;
+  text-decoration: none;
+}
+
+.insta-btn:hover {
+  color: inherit;
+}
+/*# sourceMappingURL=globals.css.map */
