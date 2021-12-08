@@ -86,7 +86,7 @@ const userID = ({ user }) => {
                                         <span className={`${styles.profileDetail__title}`}>Genre</span>
                                         <div className={`${styles.profileDetail__chips}`}>
                                             {user.musicianGenres.map(item => (
-                                                <span className={`${styles.profileDetail__chipsDetail}`}>{item.name}</span>
+                                                <span key={item._id} className={`${styles.profileDetail__chipsDetail}`}>{item.name}</span>
                                             ))}
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@ const userID = ({ user }) => {
                                         <span className={`${styles.profileDetail__title}`}>Instruments</span>
                                         <div className={`${styles.profileDetail__chips}`}>
                                             {user.musicianInstruments.map(item => (
-                                                <span className={`${styles.profileDetail__chipsDetail}`}>{item.name}</span>
+                                                <span key={item._id} className={`${styles.profileDetail__chipsDetail}`}>{item.name}</span>
                                             ))}
                                         </div>
                                     </div>
