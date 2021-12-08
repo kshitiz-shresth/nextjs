@@ -1,4 +1,4 @@
-import React, { useEffect, UseState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MyHead from '../../components/MyHead'
 import { useRouter } from 'next/dist/client/router'
 import styles from '../../styles/profile.module.css'
@@ -29,7 +29,7 @@ export async function getServerSideProps({ params }) {
     return { props: { user } }
 }
 const UserID = ({ user }) => {
-    const [key, setKey] = UseState('general-info');
+    const [key, setKey] = useState('general-info');
 
     return (
         <>
