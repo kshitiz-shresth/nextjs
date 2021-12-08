@@ -48,13 +48,69 @@ nav.navbar.bg-dark {
 }
 
 .insta-btn {
-    padding: .4rem 1rem;
+    padding: 1rem 3.4rem;
     background: #ffffff00;
-    border-radius: 26px;
+    border-radius: 30px;
     color: #fff;
-    border: 2px solid #272727;
+    border: 3px solid #888888;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         color: inherit;
     }
+}
+
+.navHeight {
+    height: 57px;
+    background: #000;
+
+    @media (max-width: 900px) {
+        height: 52px;
+    }
+}
+
+.nav-tabs {
+    border: none !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+    color: rgb(185, 185, 185);
+    font-size: 18px;
+    font-weight: 100;
+
+    &.active {
+        background: none !important;
+        border-color: #00000000 #00000000 #51d935 !important;
+        color: #51d935 !important;
+    }
+
+    &:hover {
+        background: none !important;
+        border-color: #00000000 #00000000 #51d935 !important;
+        color: #51d935 !important;
+    }
+}
+
+.tab-content {
+    p {
+        color: #aeaeae;
+        font-size: 17px;
+        font-weight: 100;
+    }
+}
+
+
+.breaker {
+    margin: 0;
+    height: 1px;
+    background: rgb(32, 32, 32);
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

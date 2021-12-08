@@ -12,7 +12,7 @@ const index = () => {
     <>
       <Head>
         <title>InstaBand</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <section>
@@ -25,7 +25,7 @@ const index = () => {
             />
             <Carousel.Caption>
               <Link href="/dashboard"><a className={`insta-btn d-none d-md-inline`}>Explore</a></Link>
-              <p className={`mt-3`}>With one click, you will see multiple bands available for your big day.</p>
+              <p className={`mt-4`}>With one click, you will see multiple bands available for your big day.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

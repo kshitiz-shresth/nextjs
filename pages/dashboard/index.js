@@ -103,7 +103,7 @@ const index = ({ lists }) => {
                             <div key={item._id} className={styles.profileSection}>
                                 <div className={styles.profileCard}>
                                     <div className={styles.profileCard__imageBox}>
-                                        <img className={styles.profileCard__image} src={item.picture_url || 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png'}></img>
+                                        <img className={styles.profileCard__image} src={item.picture_url || '/images/dummy.png'}></img>
                                     </div>
                                     <div className={styles.profileCard__info}>
                                         <p className={styles.profileCard__name}>{item.name}</p>

@@ -11,7 +11,7 @@ const index = () => {
     <Container bg="fluid">
       <Head>
         <title>NEW ITEM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <section style={{ background:'#000' }}>
 

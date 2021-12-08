@@ -1,0 +1,118 @@
+.profileSection {
+    background: #000;
+    padding-top: 20px;
+}
+
+.profileBox {
+    display: flex;
+    align-items: center;
+
+    &__imageBox {
+        height: 9rem;
+        width: 9rem;
+        margin-right: 20px;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__name {
+        color: #fff;
+    }
+
+    &__userType {
+        font-size: 16px;
+        font-weight: 600;
+
+        // color: rgb(160, 160, 160);
+        &_musician {
+            background: #CF68C1;
+            background: -webkit-linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            background: -moz-linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            background: linear-gradient(to right, #ff83f0 0%, #de7171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &_renter {
+            background: #CF68C1;
+            background: -webkit-linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            background: -moz-linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            background: linear-gradient(to right, #53ff28 0%, #ffdb2f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.basicInfoBox {
+    display: flex;
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 3rem 2rem 3rem;
+    }
+
+    &__number {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: #a6a6a6;
+        text-transform: uppercase;
+    }
+}
+
+.profileDetail {
+    &__alias {
+        color: #fff !important;
+        font-weight: 200;
+        font-size: 25px;
+        margin-top: 25px;
+    }
+
+    &__textField {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: #a6a6a6;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    &__description {
+        color: #fff;
+        font-size: 21px;
+        font-weight: 200;
+    }
+
+    &__chips {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__chipsDetail {
+        background: rgb(0, 132, 255);
+        background: linear-gradient(49deg, #2f6109 0%, #009688 100%);
+
+        color: #fff;
+        font-size: 15px;
+        font-weight: 200;
+        padding: 6px 30px;
+        border-radius: 23px;
+        margin-right: 13px;
+        margin-top: 10px;
+    }
+}
