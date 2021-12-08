@@ -28,7 +28,7 @@ export async function getServerSideProps({ params }) {
     // Pass post data to the page via props
     return { props: { user } }
 }
-const userID = ({ user }) => {
+const UserID = ({ user }) => {
     const [key, setKey] = UseState('general-info');
 
     return (
@@ -137,4 +137,4 @@ const userID = ({ user }) => {
     )
 }
 
-export default userID
+export default UserID
