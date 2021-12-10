@@ -129,8 +129,6 @@ const UserID = ({ user }) => {
                             </Tab>
                         </Tabs>
                     )}
-
-
                 </Container>
             </section>
         </>
