@@ -16,7 +16,7 @@ export const getServerSideProps = async () => {
     }
 }
 
-const index = ({ lists }) => {
+const Index = ({ lists }) => {
     let [state, setState] = useState({
         name: "",
         searchResults: []
@@ -89,4 +89,4 @@ const index = ({ lists }) => {
         </>
     )
 }
-export default index
+export default Index

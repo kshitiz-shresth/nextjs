@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import MyHead from '../../components/MyHead'
-import Navbar from '../../components/Navbar'
 import styles from '../../styles/dashboard.module.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -17,7 +16,7 @@ export const getServerSideProps = async () => {
     }
 }
 
-const index = ({ lists }) => {
+const Index = ({ lists }) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -131,4 +130,4 @@ const index = ({ lists }) => {
         </>
     )
 }
-export default index
+export default Index
